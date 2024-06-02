@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    z-index: 1010;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.home-content {
+    max-width: 600px;
+    padding-left: 15%;
+    margin: auto;
+
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 27px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content p {
+    font-size: 16px;
+    font-family: cursive;
+    margin: 20px 0 40px;
+    margin-top: 20px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #00abf0; /* Warna teks sebelum di-hover */
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #081b29;
+    background: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #081b29; /* Warna teks "Lets Talk" sebelum di-hover */
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #00abf0;
+    background: transparent;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 0;
+}
+
+.home-sci {
+    position: fixed;
+    bottom: 5px;
+    right: 1%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ubah lebar sesuai kebutuhan */
+    height: 40px; /* Ubah tinggi sesuai kebutuhan */
+    background: transparent; /* Ubah warna latar belakang sesuai kebutuhan */
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+}
+
+.home-sci a:nth-last-child(
+    margin-right: 0;
+)
+
+
+.home-sci a img {
+    width: 100%; /* Lebar gambar mengikuti ukuran parent */
+    height: 100%; /* Tinggi gambar mengikuti ukuran parent */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    border-radius: 50%; /* Agar gambar berbentuk lingkaran */
+    color:#ffffff;
+}
+
+.home-provile {
+    background-color: transparent; /* Warna latar belakang header */
+    padding: 200px; /* Padding untuk ruang di sekitar foto profil */
+    display: flex;
+    justify-content: flex-end; /* Meletakkan foto profil di sebelah kanan */
+    align-items: right; /* Posisikan vertikal di tengah */
+    padding-left: 30%;
+}
+
+.profile-img {
+    background-color: transparent;
+    width: 35%;
+    height: 50%;
+    position: fixed;
+    object-fit: cover;
+    
+    top: 17%; /* Atur posisi jarak dari atas */
+    right: 10%; /* Atur posisi jarak dari kanan */
+    z-index: 1000; /* Pastikan z-index lebih tinggi dari elemen lain jika diperlukan */
+}
+
+
+.profile-img {
+    object-fit: cover; /* Memastikan foto profil terisi penuh tanpa distorsi */
+    margin-right: 1px; /* Jarak antara foto profil dan tepi kanan */
+    padding-right: 1%;
+    opacity: 0; /* Atur opasitas awal menjadi 0 */
+    animation: fadeIn 10s ease forwards; /* Animasi fade in selama 3 detik */
+
+}
+    @keyframes fadeIn {
+        from {
+            opacity: 0; /* Mulai dengan opasitas 0 (tidak terlihat) */
+        }
+        to {
+            opacity: 1; /* Berakhir dengan opasitas 1 (terlihat) */
+        }
+}
+
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.collage-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-box {
+    margin-top: 20px;
+}
+
+.home-sci {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
